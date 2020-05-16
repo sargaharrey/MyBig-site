@@ -1,0 +1,1254 @@
+
+$main-color:#C19B76;
+$secound-color:#3B3B3B;
+$third-color:#1C1C1C;
+$main-font:"Roboto";
+$secound-font:"Gilda display";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	word-wrap: break-word;
+}
+
+body {
+	color: $main-color;
+	font-family: $secound-font;
+	font-weight: 500;
+	line-height: 1.5;
+	font-size: 16px;
+	overflow-x: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $main-font;
+}
+
+p {
+	font-family: $secound-font;
+	font-size: 12px;
+	margin: 0;
+	line-height: 1.8;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+ul {
+	margin: 0;
+}
+
+span,
+a,
+a:hover {
+	display: inline-block;
+}
+
+.section-padding {
+	padding: 80px 0;
+}
+
+.section-head {
+	margin-bottom: 60px;
+	padding-bottom: 30px;
+}
+
+.bg-gray {
+	background-color: gray;
+}
+
+.o-hidden {
+	overflow: hidden;
+}
+
+.on-top {
+	position: relative;
+	z-index: 4;
+}
+
+.position-re {
+	position: relative;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.bg-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bg-fixed {
+	background-attachment: fixed;
+}
+
+.v-align {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.v-middle {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translate(0%, -50%);
+	-moz-transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	-o-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
+}
+
+
+/* ----------------------------------------------------------------
+     [ End Basics ]
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+     [ 02 Start Buttons ]
+-----------------------------------------------------------------*/
+
+.butn {
+	padding: 15px 34px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	position: relative;
+	z-index: 3;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, .05);
+	transition: all .4s;
+	cursor: pointer;
+	outline: none !important;
+	overflow: hidden;
+	font-family: $secound-font;
+	span {
+		position: relative;
+		z-index: 2;
+		transition-delay: 0s;
+	}
+	&:after {
+		content: '';
+		width: 100%;
+		height: 0;
+		background: #fff;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transition: height 0.4s;
+		z-index: 1;
+		opacity: .4;
+	}
+	&:after {
+		transition-delay: 0s;
+		background: #fff;
+		opacity: 1;
+	}
+	&:hover {
+		&:after {
+			height: 100%;
+		}
+	}
+}
+
+.butn-bg {
+	background: #000;
+	border-color: #000;
+	color: #fff !important;
+	&:hover {
+		color: $main-color;
+		span {
+			color: $secound-color;
+		}
+	}
+}
+
+.butn-light {
+	background: #fff;
+	&:after {
+		background: $main-color;
+	}
+	&:hover {
+		span {
+			color: #fff;
+		}
+	}
+	span {
+		color: $secound-color;
+	}
+}
+
+.butn-bord {
+	background: transparent;
+	border: 1px solid #eee;
+	&:after {
+		background: #000;
+	}
+	&:hover {
+		border-color: #000;
+		span {
+			color: #FFF;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 02 End Buttons ]
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+     [ 03 Start Navbar ]
+-----------------------------------------------------------------*/
+
+.navbar {
+	min-height: 100px;
+	.logo {
+		img {
+			width: 70px;
+			height: 70px;
+		}
+	}
+	.navbar-toggler {
+		color: #fff;
+	}
+	.navbar-nav {
+		@media (max-width: 991px) {
+			display:none;
+		}
+		.nav-link {
+			font-size: 16px;
+			font-weight: 300;
+			text-transform: capitalize;
+			letter-spacing: 1px;
+			margin: 15px 29px;
+			padding: 0px;
+			transition: all .5s;
+			color: #fff;
+			font-family: $secound-font;
+			&.Active {
+				color: $main-color;
+			}
+		}
+	}
+	&.nav-transparent {
+		background: black;
+		width: 100%;
+		border-bottom: 1px solid rgba(255, 255, 255, .1);
+		z-index: 4;
+	}
+}
+
+.navbar-mobile {
+	width: 300px;
+	position: fixed;
+	z-index: 1000000000000000000;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	max-height: 100vh;
+	padding: 40px;
+	background-color: $third-color;
+	will-change: transform, filter;
+	-webkit-transition: -webkit-transform .8s cubic-bezier(.2, 1, .2, 1), -webkit-filter .3s ease-in-out;
+	transition: -webkit-transform .8s cubic-bezier(.2, 1, .2, 1), -webkit-filter .3s ease-in-out;
+	-o-transition: transform .8s cubic-bezier(.2, 1, .2, 1), filter .3s ease-in-out;
+	transition: transform .8s cubic-bezier(.2, 1, .2, 1), filter .3s ease-in-out;
+	transition: transform .8s cubic-bezier(.2, 1, .2, 1), filter .3s ease-in-out, -webkit-transform .8s cubic-bezier(.2, 1, .2, 1), -webkit-filter .3s ease-in-out;
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	transform: translateX(100%);
+	z-index: 13;
+	&.show {
+		transform: translateX(0%);
+	}
+	.close {
+		color: $main-color;
+		transform: translate(-5px, -20px);
+	}
+	.navbar-nav {
+		.nav-item {
+			margin: 10px 0;
+			.nav-link {
+				color: #FFF;
+				font-family: $secound-font;
+				&.Active {
+					color: $main-color;
+				}
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 04 Start Header ]
+-----------------------------------------------------------------*/
+
+.header {
+	.owl-carousel {
+		.owl-item {
+			position: relative;
+			height: calc(100vh - 100px)!important;
+			.item {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				background-size: 100% 100%;
+				background-position: left top;
+				background-repeat: no-repeat;
+				.caption {
+					z-index: 4;
+					max-width: 50%;
+					margin: auto;
+					padding: 0 50px 0 70px;
+					border-left: 5px solid $main-color;
+					border-right: 5px solid $main-color;
+					img {
+						margin: auto;
+						width: 182px;
+						height: 52px;
+						margin-bottom: 30px;
+					}
+					h1 {
+						font-size: 55px;
+						font-family: $main-font;
+						margin-bottom: 50px;
+						mark {
+							background-color: transparent;
+							color: $main-color
+						}
+					}
+					.butn {
+						margin: auto;
+						width: 80%;
+						font-size: 24px;
+						font-weight: $main-font;
+						span {
+							font-size: 24px;
+							font-family: $main-font;
+							font-weight: bold;
+						}
+					}
+					@media (max-width:750px) {
+						padding: 0 20px 0 20px;
+						max-width: 100%;
+						border: none;
+					}
+					@media (min-width:750px) and (max-width:992px) {
+						padding: 0 20px 0 20px;
+						max-width: 80%;
+					}
+					@media (min-width:992px) and (max-width:1200px) {
+						padding: 0 30px 0 50px;
+						max-width: 60%;
+					}
+				}
+			}
+		}
+	}
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		.owl-prev {
+			margin-left: 60px;
+			font-size: 20px;
+			color: #FFF;
+			&:hover {
+				background-color: transparent;
+				color: $main-color;
+			}
+		}
+		.owl-next {
+			margin-right: 60px;
+			font-size: 20px;
+			color: #FFF;
+			&:hover {
+				background-color: transparent;
+				color: $main-color;
+			}
+		}
+		@media (max-width:750px) {
+			.owl-prev {
+				margin-left: 20px;
+				font-size: 15px;
+			}
+			.owl-next {
+				margin-right: 20px;
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 04 Start Sub header ]
+-----------------------------------------------------------------*/
+
+.sub-header {
+	height: 500px;
+	justify-content: center;
+	z-index: 3;
+	img {
+		width: 300px;
+		height: 5px;
+		align-self: center;
+		z-index: 12;
+		@media (min-width: 790px) and (max-width:1200px) {
+			width: 100px;
+			height: 3px;
+		}
+		@media (max-width:790px) {
+			display: none;
+		}
+	}
+	h1 {
+		margin: 0 80px;
+		color: #FFF;
+		font-size: 55px;
+		z-index: 11000000;
+	}
+	.button {
+		.butn {
+			width: 300px !important;
+			font-size: 24PX;
+			font-weight: 500;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 05 Start avalability section]
+-----------------------------------------------------------------*/
+
+.avalability {
+	background-color: $third-color;
+	padding: 30px 0;
+	.box {
+		label {
+			color: #FFF;
+			font-family: $secound-font;
+			font-size: 14px;
+			font-weight: 300;
+		}
+		input {
+			width: 100%;
+			padding: 10px 0px;
+			&::placeholder {
+				font-family: $secound-font;
+				padding-left: 10px;
+				color: $third-color;
+			}
+		}
+		.butn {
+			margin-top: 30px;
+			padding: 12px !important;
+			width: 100%;
+			border-radius: 0px;
+			color: #FFF;
+			span {
+				font-size: 16px;
+				font-family: $secound-font;
+				font-weight: 500;
+			}
+		}
+		@media (max-width:992px) {
+			margin-top: 30px;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 04 Start About Section ]
+-----------------------------------------------------------------*/
+
+.About {
+	.main-box {
+		padding: 40px;
+		h3 {
+			font-size: 24px;
+			font-family: $main-font;
+			font-weight: 700;
+		}
+		h2 {
+			font-size: 32px;
+			font-family: $main-font;
+			font-weight: 900;
+			color: #000000;
+		}
+		p {
+			font-size: 18px;
+			font-family: $secound-font;
+			color: #878788;
+		}
+		.butn {
+			padding: 6px 40px !important;
+			span {
+				font-size: 12px;
+				font-family: $secound-font;
+				font-weight: 500;
+			}
+		}
+	}
+	.box {
+		img {
+			height: 100%;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 06 Start Best Rooms Section ]
+-----------------------------------------------------------------*/
+
+.Best-rooms {
+	.bestr-head {
+		h6 {
+			font-family: $secound-font;
+		}
+		hr {
+			border-bottom: 5px solid $main-color;
+			width: 30px;
+			margin: 10px auto;
+		}
+		h1 {
+			color: #000000;
+		}
+	}
+	.bestr-body {
+		.hero-room {
+			position: relative;
+			.hero-overlay {
+				position: absolute;
+				z-index: 10;
+				padding: 15px;
+				border: 5px solid $main-color;
+				width: 80%;
+				left: 10%;
+				img {
+					width: 182px;
+					margin-top: 15px;
+				}
+			}
+		}
+		.Room-price {
+			padding: 60px 0px !important;
+			position: relative;
+			@media (max-width: 992px) {
+				border-bottom:1px solid $main-color;
+			}
+			.shape {
+				position: absolute;
+				top: 38%;
+				left: -23%;
+				width: 0;
+				height: 0;
+				border-top: 40px solid transparent;
+				border-right: 80px solid #FFF;
+				border-bottom: 40px solid transparent;
+				z-index: 1000;
+			}
+			img {
+				width: 170px;
+			}
+			.price-body {
+				.price {
+					font-size: 42px;
+					font-family: $main-font;
+					font-weight: 700;
+				}
+				.time {
+					color: #878788;
+					font-size: 24px;
+					font-family: $main-font;
+					align-self: center;
+				}
+			}
+			.price-foot {
+				margin-top: 25px !important;
+				color: #000000;
+				font-size: 38px;
+				font-weight: 700;
+			}
+		}
+	}
+	.bestr-foot {
+		button {
+			width: 250px;
+			padding: 10px;
+			font-size: 12px;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 07 Start Services Section ]
+-----------------------------------------------------------------*/
+
+.services {
+	height: 100%;
+	.services-reviews {
+		@media (max-width: 992px) {
+			order: 2;
+		}
+		position: relative;
+		.review {
+			background-color: #000000;
+			width: 80%;
+			position: absolute;
+			top: 30%;
+			left: 10%;
+			z-index: 10;
+			height: 370px;
+			.review-head {
+				img {
+					width: 95px;
+					height: 95px;
+					border-radius: 50%;
+					border: 3px solid $main-color;
+				}
+			}
+			.review-body {
+				font-size: 12px;
+				color: #fff;
+				text-align: center;
+				padding: 0 100px;
+				display: flex;
+				z-index: 12;
+				img {
+					width: 30px;
+				}
+				p {
+					margin: auto;
+				}
+			}
+			.review-foot {
+				z-index: 12;
+				h5 {
+					font-size: 12px;
+					color: #fff;
+				}
+				img {
+					width: 100px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	.services-body {
+		background-color: $third-color;
+		padding: 80px 100px;
+		@media (max-width: 992px) {
+			order: 1;
+		}
+		.services-bhead {
+			h5 {
+				color: #FFF;
+				font-size: 12px;
+				font-weight: 700;
+			}
+			img {
+				width: 130px;
+				margin-top: 20px;
+				margin-bottom: 30px;
+			}
+		}
+		.services-bbody {
+			margin-top: 30px;
+			h1 {
+				font-size: 60px;
+				color: #FFFF;
+				line-height: 100px;
+				span {
+					background-color: transparent;
+					color: $main-color;
+				}
+			}
+			.paragraphes {
+				display: flex;
+				flex-direction: row;
+				margin-top: 60px;
+				p {
+					width: 55%;
+					color: #878788;
+					margin-right: 40px;
+					font-size: 14px;
+				}
+			}
+		}
+		.services-bfoot {
+			button {
+				width: 250px;
+				background-color: #000;
+				border-color: transparent;
+				padding: 10px;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+     [ 08 Start Video Section ]
+-----------------------------------------------------------------*/
+
+.video {
+	background-attachment: fixed;
+	background-size: cover;
+	.video-head {
+		h2 {
+			font-size: 42px;
+			width: 70%;
+			margin: auto;
+		}
+		hr {
+			border-bottom: 5px solid $main-color;
+			width: 85px;
+			margin: 30px auto;
+			z-index: 100;
+		}
+	}
+	.video-body {
+		margin: 50px 0;
+		span {
+			font-size: 130px;
+			margin-bottom: 50px;
+			color: $main-color;
+			&:hover {
+				opacity: .5;
+			}
+		}
+		h3 {
+			font-size: 24px;
+		}
+	}
+	.video-foot {
+		button {
+			width: 250px;
+			padding: 10px 34px!important;
+		}
+	}
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------
+                                                         [ 09 Start Room page ]
+-------------------------------------------------------------------------------------------------------------------------------*/
+
+.rooms-body {
+	height: auto;
+	max-width: 1082px;
+	margin: auto;
+	position: relative;
+	top: -110px;
+	background-color: #fff;
+	overflow: hidden;
+	.divider1 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		top: 30px;
+		width: 100%;
+		img {
+			width: 95%;
+			height: 30px;
+		}
+	}
+	.divider2 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		left: 10px;
+		top: 88px;
+		height: 100%;
+		img {
+			width: 30px;
+			height: 95%;
+		}
+	}
+	.divider3 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		right: 10px;
+		top: 88px;
+		height: 100%;
+		img {
+			width: 30px;
+			height: 95%;
+		}
+	}
+	.divider4 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		bottom: 30px;
+		width: 100%;
+		img {
+			width: 95%;
+			height: 30px;
+		}
+	}
+	.rooms-buttons {
+		transform: translateY(160px);
+		button {
+			background-color: $secound-color;
+			padding: 10px 18px;
+			color: #fff;
+			border: none;
+			margin: 0 25px;
+			margin-bottom: 30px;
+			cursor: pointer;
+		}
+		@media (max-width:992px) {
+			button {
+				width: 80%;
+			}
+		}
+	}
+	.rooms-main {
+		max-width: 70%;
+		margin: 240px auto;
+		margin-bottom: 100px;
+		.room {
+			.room-head {
+				position: relative;
+				.overlay {
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					width: 100%;
+					height: 100%;
+					background-color: #00000080;
+				}
+				.over-img {
+					position: absolute;
+					bottom: 30px;
+					left: 30px;
+					font-size: 24px;
+					font-family: $main-font;
+					color: #FFF;
+					img {
+						width: 50px;
+						margin-left: 10px;
+					}
+				}
+			}
+			.room-body {
+				background-color: $third-color;
+				height: auto;
+				padding: 0 30px;
+				@media (max-width: 992px) {
+					height: auto
+				}
+				.room-hbody {
+					font-size: 24px;
+				}
+				.boxs {
+					display: flex;
+					justify-content: space-around;
+					flex-wrap: wrap;
+					.box {
+						width: 130px;
+						height: auto;
+						background-color: $secound-color;
+						padding-top: 10px;
+						margin-top: 30px;
+						.chk {
+							font-size: 24px;
+							color: #FFF;
+							margin-bottom: 20px;
+						}
+						.chk-history {
+							margin-top: 20px;
+							display: flex;
+							justify-content: space-around;
+							.time {
+								font-size: 24px;
+								margin-right: 20px;
+							}
+							.date {
+								display: flex;
+								flex-direction: column;
+								padding-bottom: 30px;
+								span {
+									.fa-arrow-down {
+										font-size: 16px !important;
+										align-items: center !important;
+										color: #000000 !important;
+									}
+								}
+							}
+						}
+						&.Nights {
+							text-align: center;
+							span {
+								font-size: 24px;
+								color: #FFF;
+							}
+						}
+					}
+				}
+			}
+			.box-foot {
+				padding-bottom: 30px;
+			}
+		}
+	}
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------
+                                                         [ 10 Start Features page ]
+-------------------------------------------------------------------------------------------------------------------------------*/
+
+.Features {
+	padding-bottom: 0px;
+	h2 {
+		color: #000000;
+	}
+	.box {
+		margin-bottom: 80px;
+		@media (max-width: 992px) {}
+		img {
+			border: 5px solid $main-color;
+			height: 350px;
+		}
+	}
+	.text-box {
+		color: #000000;
+		@media (max-width: 992px) {
+			text-align: center !important;
+			margin-bottom: 80px;
+		}
+		img {
+			margin-top: 10px;
+			width: 60px;
+		}
+		p {
+			padding: 30px;
+			padding-left: 0px;
+			color: #878788;
+		}
+		button {
+			margin-top: 50px;
+		}
+	}
+	.text-box2 {
+		@media (max-width: 992px) {
+			text-align: center !important;
+			order: 2;
+		}
+		color: #000000;
+		img {
+			margin-top: 10px;
+			width: 60px;
+		}
+		p {
+			padding: 30px;
+			padding-right: 0px;
+			color: #878788;
+		}
+		button {
+			margin-top: 50px;
+		}
+	}
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------
+                                                         [ 11 Start Blog page ]
+-------------------------------------------------------------------------------------------------------------------------------*/
+
+.Blog {
+	.Blog-body {
+		.social-box {
+			display: flex;
+			flex-direction: column;
+			align-content: space-between;
+			span {
+				width: 100%;
+				background-color: $main-color;
+				color: #FFF;
+				font-size: 24px;
+			}
+			a {
+				width: 50px;
+				height: 50px;
+				color: #fff;
+				font-size: 40px;
+				background-color: $secound-color;
+				border-radius: 50%;
+				margin: 30px auto;
+			}
+		}
+	}
+	.Blog-main {
+		.Blog-main-body {
+			background-color: $third-color;
+			color: #FFF;
+			padding: 30px;
+			h3 {
+				font-size: 42px;
+				margin-bottom: 50px;
+			}
+			input {
+				height: 50px;
+				width: 80%;
+			}
+			h4 {
+				margin: 50px 0 30px 0;
+			}
+			ul {
+				li {
+					margin: 30px;
+				}
+			}
+		}
+		.posts {
+			padding: 30px;
+			color: #000;
+			border: 1px solid $main-color;
+			img {
+				width: 40%;
+				height: 100px;
+				margin: 15px;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------
+                                                         [ 12 Start Book page ]
+-------------------------------------------------------------------------------------------------------------------------------*/
+
+.Book {
+	h2 {
+		color: #000000;
+		margin-bottom: 50px;
+		font-size: 55px;
+	}
+	.Book-body {
+		label {
+			color: #000000;
+			font-size: 24px;
+		}
+		input {
+			width: 100%;
+			height: 50px;
+		}
+	}
+	.Offers {
+		.Offers-body {
+			position: relative;
+			img {
+				height: 300px;
+			}
+			.over-img {
+				position: absolute;
+				top: 0;
+				left: 16px;
+				width: 100px;
+				height: 50px;
+				padding: 15px;
+				background-color: #000000;
+				color: $main-color;
+			}
+			.Offers-name {
+				width: 100% !important;
+				border: 2px solid gray;
+				height: 50px;
+				padding: 8px;
+				span {
+					color: gray;
+					font-size: 24px;
+					;
+				}
+			}
+		}
+	}
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------
+                                                         [ 13 Start Contact page ]
+-------------------------------------------------------------------------------------------------------------------------------*/
+
+.Contact {
+	h3 {
+		color: #000000;
+		margin-bottom: 50px;
+	}
+	form {
+		.form-group {
+			margin-top: 30px;
+			label {
+				color: #000;
+				font-size: 24px;
+				font-weight: bold;
+			}
+			input {
+				width: 100%;
+				height: 60px;
+			}
+		}
+		.form-options {
+			margin-top: 30px;
+			label {
+				color: #000;
+				font-size: 24px;
+				font-weight: bold;
+			}
+			input {
+				margin-top: 30px;
+				padding: 60px;
+			}
+			span {
+				color: #000000;
+				font-size: 24px;
+				margin: 0 20px;
+			}
+		}
+	}
+	.GetToch {
+		margin-top: 50px;
+		#map-body {
+			height: 400px;
+		}
+	}
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------------
+                                                         [ 14 Start Footer Section ]
+-------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer-body {
+	background-color: #1C1C1C;
+	box-sizing: content-box !important;
+	padding: 50px 0px;
+	.box1 {
+		height: auto;
+		h3 {
+			font-size: 24px;
+			margin-bottom: 30px;
+			padding: 0;
+		}
+		p {
+			color: #FFF;
+			font-size: 18px;
+		}
+		.social {
+			margin-top: 30px;
+			a {
+				background-color: $main-color;
+				border-radius: 50%;
+				display: inline-block;
+				color: #FFF;
+				margin: 5px;
+				width: 50px;
+				height: 50px;
+				padding: 16px;
+			}
+		}
+	}
+	.box2 {
+		h3 {
+			color: #FFF;
+			font-size: 24px;
+			padding-bottom: 15px;
+		}
+		.contact-line {
+			padding: 16px 0;
+			border-bottom: 1px solid $secound-color;
+			span {
+				color: #FFF;
+				margin-right: 10px;
+				font-size: 18px;
+				#icon {
+					color: $main-color;
+				}
+			}
+		}
+	}
+	.box3 {
+		h3 {
+			color: #fff;
+			margin-bottom: 30px;
+			font-size: 24px;
+		}
+		p {
+			color: #FFF;
+			margin-bottom: 30px;
+		}
+		input {
+			width: 100%;
+			height: 40px;
+			margin-bottom: 30px;
+		}
+		.butn {
+			padding: 10px 18px !important;
+			span {
+				font-size: 12px;
+			}
+		}
+	}
+	@media (max-width:992px) {
+		.box1 {
+			text-align: center !important;
+		}
+		.box2 {
+			text-align: center !important;
+			margin-top: 60px;
+		}
+		.box3 {
+			text-align: center !important;
+			margin-top: 60px;
+		}
+	}
+}
+
+footer {
+	background-color: #000000;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h3 {
+		font-size: 24px;
+	}
+}
