@@ -838,7 +838,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: #000;
   z-index: 9999999999999;
 }
 

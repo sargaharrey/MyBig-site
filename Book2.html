@@ -5,7 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywrods"  content="HTML5 Template Baron multipage themeforst">
+      <meta name="keywrods"  content="HTML5 Template Baron multipage">
       <meta name="description" content="&lt;p&gt; Baron hotel welcome you at any time.....">
       <meta name="author" content="" />
       <!-- Title -->
@@ -19,8 +19,28 @@
       <link rel="stylesheet" href="css/plugins.css" />
       <!-- Core Style Css -->
       <link rel="stylesheet" href="css/style.css" />
+      <!-- responsive Style Css -->
+      <link rel="stylesheet" href="css/Responsive.css" />
    </head>
    <body>
+      <!-- =====================================
+         ==== Pre loader -->
+      <div class="loadingio-spinner-spinner-ihgihw7m13i" id="loading">
+         <div class="ldio-m5n1kjjgiu9">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+      </div>
       <!-- =====================================
          ==== Start Navbar -->
       <nav class="navbar nav-fixed nav-transparent navbar-expand-lg">
@@ -89,12 +109,12 @@
                   <a class="nav-link" href="Blog.html">Blog</a>
                </li>
                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+                  <a class="nav-link data-toggle" href="#"  data-toggle="dropdown">
                   Book
                   </a>
                   <div class="dropdown-menu">
                      <a class="dropdown-item" href="Book.html">Anonymous</a>
-                     <a class="dropdown-item" href="Book-2.html">User</a>
+                     <a class="dropdown-item" href="Book2.html">User</a>
                   </div>
                </li>
                <li class="nav-item">
@@ -120,50 +140,37 @@
       <section class="Book section-padding">
          <div class="container text-left">
          <h2>Book Online</h2>
+         <hr>
          <div class="row justify-content-between">
-         <div class="Book-body col-lg-7">
+         <div class="Book-body col-lg-12">
             <div class="row">
                <div class="form-group col-lg-6">
-                  <label for="Country">Country</label><br>
-                  <input type="text" id="Country">
+                  <!-- <label for="Country">Country</label><br> -->
+                  <input type="text" id="Country" placeholder="Country">
                </div>
                <div class="form-group col-lg-6">
-                  <label for="Arrival">Arrival</label><br>
-                  <input type="text" id="Arrival">
+                  <!-- <label for="Arrival">Arrival</label><br> -->
+                  <input type="text" id="Arrival" placeholder="Arrival">
                </div>
                <div class="form-group col-lg-6">
-                  <label for="Departure">Departure</label><br>
-                  <input type="text" id="Departure">
+                  <!-- <label for="Departure">Departure</label><br> -->
+                  <input type="text" id="Departure" placeholder="Departure">
                </div>
                <div class="form-group col-lg-6">
-                  <label for="Adults">Adults</label><br>
-                  <input type="text" id="Adults">
+                  <!-- <label for="Adults">Adults</label><br> -->
+                  <input type="text" id="Adults" placeholder="Adults">
                </div>
                <div class="form-group col-lg-6">
-                  <label for="Children">Chlderen</label><br>
-                  <input type="text" id="Children">
+                  <!-- <label for="Children">Chlderen</label><br> -->
+                  <input type="text" id="Children" placeholder="Children">
                </div>
                <div class="form-group col-lg-6">
-                  <label for="Room">Room type</label><br>
-                  <input type="text" id="Room">
+                  <!-- <label for="Room">Room type</label><br> -->
+                  <input type="text" id="Room" placeholder="Room">
                </div>
             </div>
             <div class="submit text-center mt-30">
                <button class="butn butn-bg"><span>Submit</span></button>
-            </div>
-         </div>
-         <div class="Offers col-lg-5">
-            <h2>Special Offers</h2>
-            <div class="row">
-               <div class="Offers-body col-lg-12">
-                  <img src="img/img6.jpg">
-                  <div class="over-img">
-                     <span>$50/Night</span>
-                  </div>
-                  <div class="Offers-name">
-                     <span>Single Room</sapn>
-                  </div>
-               </div>
             </div>
          </div>
       </section>

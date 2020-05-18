@@ -1,0 +1,296 @@
+$main-color:#C19B76;
+$secound-color:#3B3B3B;
+$third-color:#1C1C1C;
+$main-font:"Roboto";
+$secound-font:"Gilda display";
+// 1-navbar mobile
+// 2-Header
+// 3-subheader
+// 4-avaliabilty
+// 5-Best Rooms
+// 6-Services
+// 7-video
+// 8-Rooms
+// 9-Features
+// 10-Blog
+// 11-Book
+// -------------------------------------------------------Navbar-mobile
+.navbar-mobile {
+	@media (max-width: 750px) {
+		padding: 20px;
+		width: 200px;
+		.close {
+			margin-top: 20px;
+		}
+	}
+}
+
+// -------------------------------------------------------Haeder
+.header {
+	.owl-carousel {
+		.owl-item {
+			.item {
+				.caption {
+					@media (min-width: 300px) and(max-width:750px) {
+						max-width: 100%;
+						border: none;
+						img {
+							display: none;
+						}
+						h1 {
+							font-size: 34px;
+							line-height: 1.5;
+						}
+						.butn {
+							width: 70%;
+							span {
+								font-size: 12px;
+							}
+						}
+					}
+					@media (min-width:750px) and (max-width:992px) {
+						padding: 0 20px 0 20px;
+						max-width: 80%;
+					}
+					@media (min-width:992px) and (max-width:1200px) {
+						padding: 0 30px 0 50px;
+						max-width: 60%;
+					}
+				}
+			}
+		}
+	}
+	.owl-nav {
+		@media (max-width: 750px) {
+			.owl-prev {
+				margin-left: 20px;
+				font-size: 15px;
+			}
+			.owl-next {
+				margin-right: 20px;
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------Sub Header
+.sub-header {
+	.row {
+		margin: 0 0!important;
+		@media (min-width: 300px) and(max-width:750px) {
+			h1 {
+				font-size: 24px;
+			}
+		}
+		img {
+			@media (max-width: 790px) {
+				display: none;
+			}
+			@media (min-width: 791px) and (max-width:1200px) {
+				width: 100px;
+				height: 3px;
+			}
+		}
+	}
+	.butn {
+		@media (min-width: 300px) and(max-width:750px) {
+			width: 200px!important;
+			padding: 10px 15px;
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+// ------------------------------------------------------Avalalabilty
+.avalability {
+	.box {
+		@media (max-width: 992px) {
+			margin-top: 30px;
+		}
+	}
+}
+
+// -------------------------------------------------------Best Rooms
+.Best-rooms {
+	.hero-room {
+		.hero-overlay {
+			@media (min-width: 300px) and(max-width:750px) {
+				border: none !important;
+			}
+		}
+		.Room-price {
+			@media (max-width: 992px) {
+				border-bottom:1px solid $main-color;
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------Services
+.services {
+	.services-reviews {
+		.review {
+			.review-body {
+				@media (min-width: 300px) and(max-width:750px) {
+					padding: 10px;
+					img {
+						width: 10px;
+					}
+					p {
+						font-size: 8px;
+					}
+				}
+			}
+		}
+	}
+	.services-body {
+		@media (min-width: 300px) and(max-width:750px) {
+			padding:60px 30px;
+		}
+		@media (max-width: 992px) {
+			order: 1;
+		}
+		.services-bhead {
+			@media (min-width: 300px) and(max-width:750px) {
+				text-align: center;
+				h1 {
+					font-size: 12px;
+				}
+			}
+		}
+		.services-bbody {
+			@media (min-width: 300px) and(max-width:750px) {
+				text-align: center;
+				.paragraphes {
+					display: block;
+					p {
+						width: 100%;
+						padding: 0px;
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+		.services-bfoot {
+			@media (min-width: 300px) and(max-width:750px) {
+				text-align: center;
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------Video
+.video {
+	@media (min-width: 300px) and(max-width:750px) {
+		.video-head {
+			font-size: 12px;
+		}
+	}
+}
+
+// -------------------------------------------------------Rooms
+.rooms-body {
+	.divider1 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		top: 30px;
+		width: 100%;
+		img {
+			width: 95%;
+			height: 30px;
+		}
+	}
+	.divider2 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		left: 10px;
+		top: 88px;
+		height: 100%;
+		img {
+			width: 30px;
+			height: 95%;
+		}
+	}
+	.divider3 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		right: 10px;
+		top: 88px;
+		height: 100%;
+		img {
+			width: 30px;
+			height: 95%;
+		}
+	}
+	.divider4 {
+		@media (max-width: 991px) {
+			display: none;
+		}
+		position: absolute;
+		bottom: 30px;
+		width: 100%;
+		img {
+			width: 95%;
+			height: 30px;
+		}
+	}
+	.roons-buttons {
+		@media (max-width: 992px) {
+			button {
+				width: 80%;
+			}
+		}
+	}
+	.room-body {
+		@media (max-width: 992px) {
+			height: auto
+		}
+	}
+}
+
+// -------------------------------------------------------Features
+.Features {
+	.text-box1 {
+		@media (max-width: 992px) {
+			text-align: center !important;
+			margin-bottom: 80px;
+		}
+	}
+	.text-box2 {
+		@media (max-width: 992px) {
+			text-align: center !important;
+			order: 2;
+		}
+	}
+}
+
+// -------------------------------------------------------Blog
+.Blog {
+	.Blog-main {
+		.Blog-main-body {
+			ul {
+				@media (min-width: 300px) and(max-width:1200px) {
+					padding: 0px;
+				}
+			}
+		}
+	}
+}
+
+// -------------------------------------------------------Book
+.Book {
+	.offers {
+		@media (max-width: 992px) {
+			margin-top: 80px !important;
+		}
+	}
+}

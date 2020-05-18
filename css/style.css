@@ -1,12 +1,19 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   outline: none;
   list-style: none;
   word-wrap: break-word; }
 
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden !important; }
+
 body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   color: #C19B76;
   font-family: "Gilda display";
   font-weight: 500;
@@ -33,7 +40,8 @@ img {
   height: auto; }
 
 ul {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 span,
 a,
@@ -104,7 +112,7 @@ a:hover {
   z-index: 3;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
   transition: all .4s;
-  cursor: pointer;
+  cursor: pointer !important;
   outline: none !important;
   overflow: hidden;
   font-family: "Gilda display"; }
@@ -140,9 +148,10 @@ a:hover {
       color: #3B3B3B; }
 
 .butn-light {
-  background: #fff; }
+  background: #fff;
+  border: none; }
   .butn-light:after {
-    background: #C19B76; }
+    background: #000; }
   .butn-light:hover span {
     color: #fff; }
   .butn-light span {
@@ -268,19 +277,6 @@ a:hover {
           font-size: 24px;
           font-family: "Roboto";
           font-weight: bold; }
-      @media (max-width: 750px) {
-        .header .owl-carousel .owl-item .item .caption {
-          padding: 0 20px 0 20px;
-          max-width: 100%;
-          border: none; } }
-      @media (min-width: 750px) and (max-width: 992px) {
-        .header .owl-carousel .owl-item .item .caption {
-          padding: 0 20px 0 20px;
-          max-width: 80%; } }
-      @media (min-width: 992px) and (max-width: 1200px) {
-        .header .owl-carousel .owl-item .item .caption {
-          padding: 0 30px 0 50px;
-          max-width: 60%; } }
 .header .owl-nav {
   position: absolute;
   top: 50%;
@@ -301,45 +297,30 @@ a:hover {
     .header .owl-nav .owl-next:hover {
       background-color: transparent;
       color: #C19B76; }
-  @media (max-width: 750px) {
-    .header .owl-nav .owl-prev {
-      margin-left: 20px;
-      font-size: 15px; }
-    .header .owl-nav .owl-next {
-      margin-right: 20px;
-      font-size: 15px; } }
 
 /* ----------------------------------------------------------------
-     [ 04 Start Sub header ]
+     [ 05 Start Sub header ]
 -----------------------------------------------------------------*/
 .sub-header {
   height: 500px;
-  justify-content: center;
   z-index: 3; }
   .sub-header img {
     width: 300px;
     height: 5px;
     align-self: center;
     z-index: 12; }
-    @media (min-width: 790px) and (max-width: 1200px) {
-      .sub-header img {
-        width: 100px;
-        height: 3px; } }
-    @media (max-width: 790px) {
-      .sub-header img {
-        display: none; } }
   .sub-header h1 {
     margin: 0 80px;
     color: #FFF;
     font-size: 55px;
     z-index: 11000000; }
   .sub-header .button .butn {
-    width: 300px !important;
+    width: 300px;
     font-size: 24PX;
     font-weight: 500; }
 
 /* ----------------------------------------------------------------
-     [ 05 Start avalability section]
+     [ 06 Start avalability section]
 -----------------------------------------------------------------*/
 .avalability {
   background-color: #1C1C1C;
@@ -366,12 +347,9 @@ a:hover {
       font-size: 16px;
       font-family: "Gilda display";
       font-weight: 500; }
-  @media (max-width: 992px) {
-    .avalability .box {
-      margin-top: 30px; } }
 
 /* ----------------------------------------------------------------
-     [ 04 Start About Section ]
+     [ 07 Start About Section ]
 -----------------------------------------------------------------*/
 .About .main-box {
   padding: 40px; }
@@ -398,7 +376,7 @@ a:hover {
   height: 100%; }
 
 /* ----------------------------------------------------------------
-     [ 06 Start Best Rooms Section ]
+     [ 08 Start Best Rooms Section ]
 -----------------------------------------------------------------*/
 .Best-rooms .bestr-head h6 {
   font-family: "Gilda display"; }
@@ -423,9 +401,6 @@ a:hover {
 .Best-rooms .bestr-body .Room-price {
   padding: 60px 0px !important;
   position: relative; }
-  @media (max-width: 992px) {
-    .Best-rooms .bestr-body .Room-price {
-      border-bottom: 1px solid #C19B76; } }
   .Best-rooms .bestr-body .Room-price .shape {
     position: absolute;
     top: 38%;
@@ -458,7 +433,7 @@ a:hover {
   font-size: 12px; }
 
 /* ----------------------------------------------------------------
-     [ 07 Start Services Section ]
+     [ 09 Start Services Section ]
 -----------------------------------------------------------------*/
 .services {
   height: 100%; }
@@ -502,9 +477,6 @@ a:hover {
   .services .services-body {
     background-color: #1C1C1C;
     padding: 80px 100px; }
-    @media (max-width: 992px) {
-      .services .services-body {
-        order: 1; } }
     .services .services-body .services-bhead h5 {
       color: #FFF;
       font-size: 12px;
@@ -539,7 +511,7 @@ a:hover {
       font-size: 12px; }
 
 /* ----------------------------------------------------------------
-     [ 08 Start Video Section ]
+     [ 10 Start Video Section ]
 -----------------------------------------------------------------*/
 .video {
   background-attachment: fixed;
@@ -568,7 +540,7 @@ a:hover {
     padding: 10px 34px !important; }
 
 /* -----------------------------------------------------------------------------------------------------------------------------
-                                                         [ 09 Start Room page ]
+                                                         [11 Start Room page ]
 -------------------------------------------------------------------------------------------------------------------------------*/
 .rooms-body {
   height: auto;
@@ -578,48 +550,6 @@ a:hover {
   top: -110px;
   background-color: #fff;
   overflow: hidden; }
-  .rooms-body .divider1 {
-    position: absolute;
-    top: 30px;
-    width: 100%; }
-    @media (max-width: 991px) {
-      .rooms-body .divider1 {
-        display: none; } }
-    .rooms-body .divider1 img {
-      width: 95%;
-      height: 30px; }
-  .rooms-body .divider2 {
-    position: absolute;
-    left: 10px;
-    top: 88px;
-    height: 100%; }
-    @media (max-width: 991px) {
-      .rooms-body .divider2 {
-        display: none; } }
-    .rooms-body .divider2 img {
-      width: 30px;
-      height: 95%; }
-  .rooms-body .divider3 {
-    position: absolute;
-    right: 10px;
-    top: 88px;
-    height: 100%; }
-    @media (max-width: 991px) {
-      .rooms-body .divider3 {
-        display: none; } }
-    .rooms-body .divider3 img {
-      width: 30px;
-      height: 95%; }
-  .rooms-body .divider4 {
-    position: absolute;
-    bottom: 30px;
-    width: 100%; }
-    @media (max-width: 991px) {
-      .rooms-body .divider4 {
-        display: none; } }
-    .rooms-body .divider4 img {
-      width: 95%;
-      height: 30px; }
   .rooms-body .rooms-buttons {
     transform: translateY(160px); }
     .rooms-body .rooms-buttons button {
@@ -630,9 +560,6 @@ a:hover {
       margin: 0 25px;
       margin-bottom: 30px;
       cursor: pointer; }
-    @media (max-width: 992px) {
-      .rooms-body .rooms-buttons button {
-        width: 80%; } }
   .rooms-body .rooms-main {
     max-width: 70%;
     margin: 240px auto;
@@ -654,17 +581,14 @@ a:hover {
         left: 30px;
         font-size: 24px;
         font-family: "Roboto";
-        color: #FFF; }
-        .rooms-body .rooms-main .room .room-head .over-img img {
-          width: 50px;
-          margin-left: 10px; }
+        color: #FFF;
+        font-size: 14px; }
+        .rooms-body .rooms-main .room .room-head .over-img .fa-star {
+          color: #C19B76; }
     .rooms-body .rooms-main .room .room-body {
       background-color: #1C1C1C;
       height: auto;
       padding: 0 30px; }
-      @media (max-width: 992px) {
-        .rooms-body .rooms-main .room .room-body {
-          height: auto; } }
       .rooms-body .rooms-main .room .room-body .room-hbody {
         font-size: 24px; }
       .rooms-body .rooms-main .room .room-body .boxs {
@@ -705,7 +629,7 @@ a:hover {
       padding-bottom: 30px; }
 
 /* -----------------------------------------------------------------------------------------------------------------------------
-                                                         [ 10 Start Features page ]
+                                                         [ 12 Start Features page ]
 -------------------------------------------------------------------------------------------------------------------------------*/
 .Features {
   padding-bottom: 0px; }
@@ -714,14 +638,10 @@ a:hover {
   .Features .box {
     margin-bottom: 80px; }
     .Features .box img {
-      border: 5px solid #C19B76;
-      height: 350px; }
+      height: 350px;
+      box-shadow: 10px 10px 5px gray; }
   .Features .text-box {
     color: #000000; }
-    @media (max-width: 992px) {
-      .Features .text-box {
-        text-align: center !important;
-        margin-bottom: 80px; } }
     .Features .text-box img {
       margin-top: 10px;
       width: 60px; }
@@ -730,7 +650,7 @@ a:hover {
       padding-left: 0px;
       color: #878788; }
     .Features .text-box button {
-      margin-top: 50px; }
+      margin-top: 30px; }
   .Features .text-box2 {
     color: #000000; }
     @media (max-width: 992px) {
@@ -745,10 +665,10 @@ a:hover {
       padding-right: 0px;
       color: #878788; }
     .Features .text-box2 button {
-      margin-top: 50px; }
+      margin-top: 30px; }
 
 /* -----------------------------------------------------------------------------------------------------------------------------
-                                                         [ 11 Start Blog page ]
+                                                         [ 13 Start Blog page ]
 -------------------------------------------------------------------------------------------------------------------------------*/
 .Blog .Blog-body .social-box {
   display: flex;
@@ -792,18 +712,25 @@ a:hover {
     margin-top: 30px; }
 
 /* -----------------------------------------------------------------------------------------------------------------------------
-                                                         [ 12 Start Book page ]
+                                                         [ 14 Start Book page ]
 -------------------------------------------------------------------------------------------------------------------------------*/
 .Book h2 {
   color: #000000;
-  margin-bottom: 50px;
   font-size: 55px; }
+.Book hr {
+  margin-bottom: 50px;
+  border: 3px solid #C19B76; }
 .Book .Book-body label {
   color: #000000;
   font-size: 24px; }
 .Book .Book-body input {
   width: 100%;
   height: 50px; }
+  .Book .Book-body input::placeholder {
+    padding-left: 30px; }
+.Book .Offers h3 {
+  color: #000;
+  margin-bottom: 30px; }
 .Book .Offers .Offers-body {
   position: relative; }
   .Book .Offers .Offers-body img {
@@ -819,7 +746,7 @@ a:hover {
     color: #C19B76; }
   .Book .Offers .Offers-body .Offers-name {
     width: 100% !important;
-    border: 2px solid gray;
+    border: 2px solid #000;
     height: 50px;
     padding: 8px; }
     .Book .Offers .Offers-body .Offers-name span {
@@ -827,7 +754,7 @@ a:hover {
       font-size: 24px; }
 
 /* -----------------------------------------------------------------------------------------------------------------------------
-                                                         [ 13 Start Contact page ]
+                                                         [ 15 Start Contact page ]
 -------------------------------------------------------------------------------------------------------------------------------*/
 .Contact h3 {
   color: #000000;
@@ -841,6 +768,10 @@ a:hover {
   .Contact form .form-group input {
     width: 100%;
     height: 60px; }
+    .Contact form .form-group input::placeholder {
+      padding-left: 30px; }
+    .Contact form .form-group input::-webkit-datetime-edit {
+      padding-left: 30px; }
 .Contact form .form-options {
   margin-top: 30px; }
   .Contact form .form-options label {
@@ -860,7 +791,7 @@ a:hover {
     height: 400px; }
 
 /* -----------------------------------------------------------------------------------------------------------------------------
-                                                         [ 14 Start Footer Section ]
+                                                         [ 16 Start Footer Section ]
 -------------------------------------------------------------------------------------------------------------------------------*/
 .footer-body {
   background-color: #1C1C1C;
